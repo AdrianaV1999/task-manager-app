@@ -24,7 +24,6 @@ import { useOutletContext } from "react-router-dom";
 import TaskItem from "../components/TaskItem";
 import axios from "axios";
 import TaskModal from "../components/TaskModal";
-const API_BASE = "http://localhost:4000/api/tasks";
 const Dashboard = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);

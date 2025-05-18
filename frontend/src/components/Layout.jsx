@@ -8,6 +8,7 @@ const Layout = ({ user, onLogout }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const url = import.meta.env.VITE_BACKEND_URL;
 
   const fetchTasks = useCallback(async () => {
     setLoading(true);
@@ -15,7 +16,7 @@ const Layout = ({ user, onLogout }) => {
     try {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No auth token found");
-      const { data } = await axios.get("http://localhost:4000/api/tasks/gp", {
+      const { data } = await axios.get(`${url}/api/tasks/gp`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const arr = Array.isArray(data)

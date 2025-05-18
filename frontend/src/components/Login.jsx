@@ -29,7 +29,7 @@ const Login = ({ onSubmit, onSwitchMode }) => {
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -57,14 +57,22 @@ const Login = ({ onSubmit, onSwitchMode }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form data:", formData);
+    console.log("Remember me checked:", rememberMe);
+
     if (!rememberMe) {
       toast.error('You must enable "Remember Me" to login');
       return;
     }
+
     setLoading(true);
     try {
+      console.log("Sending login request...");
       const { data } = await axios.post(`${url}/api/user/login`, formData);
+      console.log("Response data:", data);
+
       if (!data.token) throw new Error(data.message || "Login failed");
+
       localStorage.setItem("token", data.token);
       localStorage.setItem("userId", data.user.id);
       setFormData(INITIAL_FORM);
@@ -74,9 +82,11 @@ const Login = ({ onSubmit, onSwitchMode }) => {
         userId: data.user.id,
         ...data.user,
       });
+
       toast.success("Login successful! Redirecting...");
       setTimeout(() => navigate("/"), 1000);
     } catch (err) {
+      console.error("Login error:", err);
       const msg = err.response?.data?.message || err.message;
       toast.error(msg);
     } finally {
