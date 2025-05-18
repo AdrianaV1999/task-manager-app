@@ -40,7 +40,7 @@ const SignUp = ({ onSwitchMode }) => {
         type: "error",
       });
     } finally {
-      setLoadng(false);
+      setLoading(false);
     }
   };
   return (
