@@ -1,10 +1,11 @@
 # 🗂️ Task Manager App
 
-A full-stack task management application built with **React** on the frontend and **Node.js/Express** with **MongoDB** on the backend. The app features **user authentication**, **task CRUD operations**, **advanced filtering and sorting**, and detailed **task statistics** for enhanced productivity. The responsive UI is built using **Tailwind CSS**.
+A full-stack task management application built with **React + Vite** on the frontend and **Node.js/Express** with **MongoDB** on the backend. The app features **user authentication**, **task CRUD operations**, **advanced filtering and sorting**, and detailed **task statistics** for enhanced productivity. The responsive UI is built using **Tailwind CSS**.
 
 ## Live Preview
 
 - []
+
 ---
 
 ## Features
@@ -86,7 +87,7 @@ A full-stack task management application built with **React** on the frontend an
 
 ## Tech Stack
 
-- **Frontend:** React  
+- **Frontend:** React + Vite  
 - **Backend:** Node.js + Express  
 - **Database:** MongoDB with Mongoose ODM  
 - **Authentication:** JWT (jsonwebtoken)  
@@ -94,5 +95,6 @@ A full-stack task management application built with **React** on the frontend an
 - **Styling:** Tailwind CSS with utility classes and static dummy data  
 
 ---
+
 
 
