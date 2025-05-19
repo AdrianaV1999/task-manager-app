@@ -2,9 +2,7 @@
 
 A full-stack task management application built with **React + Vite** on the frontend and **Node.js/Express** with **MongoDB** on the backend. The app features **user authentication**, **task CRUD operations**, **advanced filtering and sorting**, and detailed **task statistics** for enhanced productivity. The responsive UI is built using **Tailwind CSS**.
 
-## Live Preview
-
-- [https://task-manager-9whx.onrender.com/]
+**Live Site** - [https://task-manager-9whx.onrender.com/]
 
 ---
 
