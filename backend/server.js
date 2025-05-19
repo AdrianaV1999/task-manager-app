@@ -9,7 +9,12 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 //MIDLEWARE
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://task-manager-9whx.onrender.com"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
