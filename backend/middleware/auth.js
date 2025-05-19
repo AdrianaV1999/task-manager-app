@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret_here";
+const JWT_SECRET = process.env.JWT_KEY || "your_jwt_secret_here";
 
 export default async function authMiddleware(req, res, next) {
   //GRAB THE BEARER TOKEN FROM AUTHORIZATION HEADER

@@ -10,7 +10,7 @@ const Navbar = ({ user = {}, onLogout }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuref.current && !menuref.current.contains(event.target.value)) {
+      if (menuref.current && !menuref.current.contains(event.target)) {
         setMenuOpen(false);
       }
     };

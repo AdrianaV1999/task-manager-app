@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect(
-      `mongodb+srv://adrianav12899:taskflow128@cluster0.tclwglh.mongodb.net/Taskflow`
-    );
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("DB CONNECTED");
   } catch (error) {
     console.error("DB CONNECTION ERROR:", error);

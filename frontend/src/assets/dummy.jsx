@@ -171,7 +171,7 @@ export const MESSAGE_ERROR =
 // TASK ITEM
 export const getPriorityColor = (priority) => {
   const colors = {
-    low: "border-green-500 bg-green-50/50 text-green-500",
+    low: "border-green-500 bg-green-50/50 text-green-600",
     medium: "border-sky-500 bg-sky-50/50 text-sky-500",
     high: "border-fuchsia-500 bg-fuchsia-50/50 text-fuchsia-500",
   };
@@ -371,7 +371,7 @@ export const TI_CLASSES = {
     "h-full bg-gradient-to-r from-cyan-500 to-sky-600 transition-all duration-300",
   rightContainer: "flex flex-col items-end gap-2 sm:gap-3",
   menuButton:
-    "p-1 sm:p-1.5 hover:bg-sky-100 rounded-lg text-gray-500 hover:text-sky-700 transition-colors duration-200",
+    "p-1 sm:p-1.5 hover:bg-sky-100 rounded-lg text-gray-500 hover:text-sky-600 transition-colors duration-200",
   menuDropdown:
     "absolute right-0 mt-1 w-40 sm:w-48 bg-white border border-sky-100 rounded-xl shadow-lg z-10 overflow-hidden animate-fadeIn",
   dateRow: "flex items-center gap-1.5 text-xs font-medium whitespace-nowrap",

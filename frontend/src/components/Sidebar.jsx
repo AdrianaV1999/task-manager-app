@@ -100,11 +100,7 @@ const Sidebar = ({ user, tasks }) => {
                     <p className={TIP_CARD.text}>
                       Stay organized. Get things done.
                     </p>
-                    <p
-                      href=""
-                      target="_blank"
-                      className="block mt-2 text-sm text-sky-500  hover:underline"
-                    >
+                    <p className="block mt-2 text-sm text-sky-500  hover:underline">
                       From daily chores to big goals, we’ve got your back.
                     </p>
                   </div>

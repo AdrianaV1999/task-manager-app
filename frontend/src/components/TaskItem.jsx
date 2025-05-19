@@ -174,7 +174,7 @@ const TaskItem = ({
                 <button
                   key={opt.action}
                   onClick={() => handleAction(opt.action)}
-                  className="w-full px-3 sm:px-4 py-2 text-left text-xs sm:text-sm hover:bg-sky-500 flex items-center gap-2 transition-colors duration-200"
+                  className="w-full px-3 sm:px-4 py-2 text-left text-xs sm:text-sm hover:bg-sky-100 flex items-center gap-2 transition-colors duration-200"
                 >
                   {opt.icon}
                   {opt.label}

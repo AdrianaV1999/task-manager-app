@@ -4,11 +4,12 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import axios from "axios";
 import { Circle, Clock, TrendingUp, Zap } from "lucide-react";
+const url = import.meta.env.VITE_BACKEND_URL;
+
 const Layout = ({ user, onLogout }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const url = import.meta.env.VITE_BACKEND_URL;
 
   const fetchTasks = useCallback(async () => {
     setLoading(true);

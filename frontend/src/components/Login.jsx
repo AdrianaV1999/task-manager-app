@@ -5,6 +5,7 @@ import { BUTTON_CLASSES, INPUTWRAPPER } from "../assets/dummy";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const url = import.meta.env.VITE_BACKEND_URL;
 const INITIAL_FORM = { email: "", password: "" };
 
 const FIELDS = [
@@ -29,7 +30,6 @@ const Login = ({ onSubmit, onSwitchMode }) => {
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const url = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
