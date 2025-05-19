@@ -7,6 +7,7 @@ import axios from "axios";
 
 const url = import.meta.env.VITE_BACKEND_URL;
 const INITIAL_FORM = { email: "", password: "" };
+console.log("API URL:", import.meta.env.VITE_BACKEND_URL);
 
 const FIELDS = [
   {

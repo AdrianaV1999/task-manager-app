@@ -9,6 +9,8 @@ import {
 } from "../assets/dummy";
 import axios from "axios";
 const API_URL = import.meta.env.VITE_BACKEND_URL;
+console.log("API URL:", import.meta.env.VITE_BACKEND_URL);
+
 const INITIAL_FORM = { name: "", email: "", password: "" };
 
 const SignUp = ({ onSwitchMode }) => {
